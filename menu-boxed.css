@@ -1,0 +1,71 @@
+.navbar-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  border: none;
+}
+
+.navbar-wrapper .nav-container {
+  background: #f9578d;
+}
+
+.navbar-wrapper .nav-container .navbar-logo-wrapper .navbar-logo-link {
+  padding: 0;
+  height: auto;
+}
+
+.navbar-wrapper .nav-container .navbar-logo-wrapper .navbar-logo-link .navbar-logo {
+  height: 70px;
+}
+
+.navbar-wrapper .nav-container .navbar-list {
+  float: right;
+  padding-right: 100px;
+}
+
+.navbar-wrapper .nav-container .navbar-list .navbar-list-item {
+  position: relative;
+}
+
+.navbar-wrapper .nav-container .navbar-list .navbar-list-item .mega-menu {
+  min-width: 700px;
+  right: -300px;
+}
+
+.navbar-wrapper .nav-container .navbar-list .navbar-list-item:hover .navbar-sublist {
+  opacity: 1;
+  height: auto;
+  transform: translateY(0px);
+}
+
+.navbar-wrapper .nav-container .navbar-list .navbar-list-item .navbar-list-item-link {
+  padding: 25px 15px;
+  color: white;
+  text-shadow: none;
+}
+
+.navbar-wrapper .nav-container .navbar-list .navbar-list-item .navbar-list-item-link:hover {
+  background: none;
+}
+
+.navbar-wrapper .nav-container .navbar-list .navbar-list-item .navbar-sublist {
+  position: absolute;
+  background: #f8578d;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease-in;
+}
+
+.navbar-wrapper .nav-container .navbar-list .navbar-list-item .navbar-sublist .navbar-sublist-item .navbar-sublist-item-link {
+  color: white;
+  text-shadow: none;
+  display: block;
+  padding: 10px 130px 10px 15px;
+  border-bottom: 1px dashed;
+}
+
+.navbar-wrapper .nav-container .navbar-list .navbar-list-item .navbar-sublist .navbar-sublist-item .navbar-sublist-item-link:hover {
+  background: none;
+}

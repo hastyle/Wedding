@@ -1,0 +1,88 @@
+.menu-1
+  //.page-content
+    .background
+      height: 100vh
+      background: black
+      background-image: url(/assets/imgs/background-img.png)
+      background-size: cover
+
+
+.navbar-wrapper
+  position: absolute
+  z-index: 99999
+  width: 100%
+  top: 0
+  border: none
+  border-radius: 0
+
+  color: white
+  .nav-container
+    background: transparent
+    .navbar-logo-wrapper
+      .navbar-logo-link
+        padding: 0
+        height: auto
+        .navbar-logo
+          height: 73px
+          //padding: 10px 0
+
+    .navbar-list
+      float: right
+      //padding-right: 100px
+      //background: green
+      //margin-top: 10px
+      .active
+        border-bottom: 3px solid rgba(255, 193, 213, 1)
+        padding-bottom: -50px
+      .navbar-list-item
+        position: relative
+
+        .mega-menu
+          min-width: 700px
+          right: -300px
+        &:hover
+          .navbar-sublist
+            opacity: 1
+            height: auto
+            transform: translateY(0px)
+        .navbar-list-item-link
+          padding: 25px 15px
+          color: white
+          text-shadow: 1px 0px 5px rgba(0,0,0,0.5)
+          font-weight: 400
+          text-transform: uppercase
+          //font: Helvetica
+          &:hover
+            background: none
+        .navbar-sublist
+          position: absolute
+          background: #cc3b6a
+          box-shadow: 0px 0px 20px rgba(255, 193, 213, .2)
+          opacity: 0
+          height: 0
+          overflow: hidden
+          transform: translateY(10px)
+          transition: all 0.3s ease-in
+          &:nth-child(2)
+            right: 0
+          .navbar-sublist-item
+            .navbar-sublist-item-link
+              color: white
+              text-shadow: none
+              display: block
+              padding: 10px 130px 10px 15px
+              border-bottom: 1px dashed
+              &:hover
+                background: none
+.sticky
+  position: fixed
+  background: rgba(204, 59, 106, 1)
+  transition: all 0.3s ease-in
+  animation: sticky 0.3s
+  transform: translateY(0px)
+
+@keyframes sticky
+  from
+    transform: translateY(-72px)
+  to
+    transform: translateY(0px)

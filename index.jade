@@ -1,0 +1,224 @@
+include ./html-start
+
+
+  mixin title(title,content)
+    h3.title #{title}
+    .story-item-seperator
+      .story-item-wrapper
+        .story-item-line
+        .story-item-square
+        .story-item-line
+    p.content #{content}
+
+section#header
+  .header-wrapper
+    .header-parallax
+      img.img.img-1(src="assets/imgs/petal-1.png")
+      img.img.img-2(src="assets/imgs/petal-2.png")
+      img.img.img-3(src="assets/imgs/petal-3.png")
+    //nav.navbar.nav-container
+      .container-fluid
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header.nav-wrapper
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand.logo(href='#')
+            img.logo-img(src="/assets/imgs/logo.png")
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse.mobile-wrapper
+          ul.nav.navbar-nav.nav-list
+            li.active.nav-list-item
+              a.nav-list-item-link(href='#') Link
+            li.nav-list-item
+              a.nav-list-item-link(href='#') Link
+    include ./menu-boxed
+    //include ./menu-left-fixed
+    .header-content-wrapper
+      .header-content
+        h1.title Wedding
+        p.content
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        button.button.btn Regestry
+
+section#story
+  .story-wrapper
+    .container
+      .col-xs-12.col-sm-4
+        .story-item-wrapper
+          .story-item-image-wrapper
+            .story-item-image
+          h3.story-item-title love story
+          .story-item-seperator
+            .story-item-wrapper
+              .story-item-line
+              .story-item-square
+              .story-item-line
+          p.story-item-content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          button.btn.story-item-button see more
+      .col-xs-12.col-sm-4
+        .story-item-wrapper
+          .story-item-image-wrapper
+            .story-item-image
+          h3.story-item-title love story
+          .story-item-seperator
+            .story-item-wrapper
+              .story-item-line
+              .story-item-square
+              .story-item-line
+          p.story-item-content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          button.btn.story-item-button see more
+      .col-xs-12.col-sm-4
+        .story-item-wrapper
+          .story-item-image-wrapper
+            .story-item-image
+          h3.story-item-title love story
+          .story-item-seperator
+            .story-item-wrapper
+              .story-item-line
+              .story-item-square
+              .story-item-line
+          p.story-item-content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          button.btn.story-item-button see more
+
+section#date
+  .date-wrapper
+    .container
+      .row
+        .col-sm-12
+          img.logo(src="assets/imgs/date-logo.png")
+          .date-content-wrapper
+            h2.date-title We Are Getting Married
+            h3.date-title in
+            .date-timer-wrapper
+              .date-counter-wrapper
+                h2.counter#counter-1 52
+                h3.counter-name Days
+              .date-counter-wrapper
+                h2.counter#counter-2 23
+                h3.counter-name Hours
+              .date-counter-wrapper
+                h2.counter#counter-3 55
+                h3.counter-name Minutes
+
+section#us
+  .us-wrapper
+    .container
+      .row
+        .col-sm-12
+          h3.title Anna & Mark
+          .story-item-seperator
+            .story-item-wrapper
+              .story-item-line
+              .story-item-square
+              .story-item-line
+          p.content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+      img.rose-3(src="/assets/imgs/rose-3.png")
+      img.rose-4(src="/assets/imgs/rose-4.png")
+      .row
+        .col-sm-5
+          .bride-wrapper
+            .overlay
+          .rose
+          h3.title Anna William
+          h5.subtitle Bride
+        .col-sm-2
+          .circle
+            span +
+        .col-sm-5
+          .groom-wrapper
+            .overlay
+          .rose
+          h3.title Mark Elton
+          h5.subtitle Groom
+
+section#instagram
+  .instagram-wrapper
+    .instagram-picture-1
+    .instagram-picture-2
+    .instagram-picture-3
+    .instagram-picture-4
+    .instagram-picture-1
+    .instagram-picture-2
+    .instagram-picture-3
+    .instagram-picture-4
+
+
+section#RSVP
+  .RSVP-wrapper
+    +title('Are You Attending ?', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor')
+    .mail-wrapper.clearfix
+      .col-sm-6.col-sm-offset-3
+        .mail-content
+          h3.title To send greetings
+          form.inline-form
+            .form-group
+              input.main-form(type="text" placeholder="Your Name")
+              input.main-form(type="text" placeholder="Your Phone")
+              textarea.main-textarea.form-control(rows="10" placeholder="Your Message")
+          .circle send
+          .stamp
+          .rose
+        .picture
+
+
+#stories
+  .story-container
+    .container
+      .col-sm-4.col-sm-offset-2
+        p.lead-paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud et dolore magna aliqua.
+
+        p.paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+      .col-sm-4
+        p.paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        p.paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+      .row
+        .col-sm-12
+          .circle full story
+
+
+#details
+  .details-container
+    .container
+      .row
+        .col-sm-12
+          +title('Events Details', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor')
+        .col-sm-6.col-sm-offset-3
+          .circle Ceremony
+          table
+            tr
+              td Date
+              td.col-2 7 march 2016
+            tr
+              td Time
+              td.col-2 12:00 - 14:00
+            tr
+              td Date
+              td.col-2 243 Rose street, Califfornia USA
+            tr
+              td Dress-code
+              td.col-2 Black, White, Red clothes
+          .map
+            i.fa.fa-map-marker.icon
+            | on the map
+
+
+
+#thankyou
+  .thankyou-container
+    .container
+      .row
+        .col-sm-12
+          h2.title Thank You!
+      .row
+        .col-sm-12
+          .thankyou-content-wrapper
+            h3.content Anna Willam
+            h3.content-small wedding
+            h3.content Mark Elton
+          .circle
+            i.fa.fa-arrow-up.icon
+
+include ./html-end

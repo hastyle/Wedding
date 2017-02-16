@@ -1,0 +1,678 @@
+//////////////// FONTS /////////////////////////////////////////
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|PT+Sans')
+@import url('https://fonts.googleapis.com/css?family=Bitter|Cabin|Coiny|Crete+Round|Dancing+Script|Domine|Droid+Serif|Eczar|Exo+2|Francois+One|Josefin+Sans|Lobster|Noto+Serif|Open+Sans|Open+Sans+Condensed:300|Oswald|PT+Sans|Pacifico|Pathway+Gothic+One|Play|Playfair+Display|Poiret+One|Prociono|Questrial|Quicksand|Raleway|Righteous|Roboto|Roboto+Condensed|Yanone+Kaffeesatz')
+@import 'menu-boxed.sass'
+
+/////////////////////
+.title
+  font-family: 'Cormorant Garamond', serif
+  color: black
+  text-transform: uppercase
+  font-weight: 500
+  text-align: center
+.story-item-seperator
+  text-align: center
+  .story-item-wrapper
+    padding: 0
+    .story-item-line
+      width: 20px
+      height: 1px
+      background: #f8578d
+      display: inline-block
+      vertical-align: middle
+      transform: translateY(-1px)
+    .story-item-square
+      width: 10px
+      height: 10px
+      border: 1px solid #f8578d
+      transform: rotate(45deg)
+      display: inline-block
+.content
+  text-align: center
+  margin-bottom: 100px
+/////////////////
+.circle
+  width: 70px
+  height: 70px
+  background: #f8578d
+  border-radius: 100%
+  box-shadow: 0px 5px 10px  rgba(249, 87, 141, 0.8)
+  margin: 160px auto
+  transition: all 0.3s ease-in-out
+  &:hover
+    transform: scale(0.8)
+    box-shadow: 0px 15px 10px  rgba(249, 87, 141, 0.4)
+  span
+    font-size: 20px
+    line-height: 69px
+    color: white
+//////////
+
+
+body
+  font-family: 'Droid+Serif', sans-serif
+#header
+
+  //.nav-container
+    width: 100%
+    position: absolute
+    z-index: 9999
+    top: 0
+    .nav-wrapper
+      .logo
+        background: #f8578d
+        height: auto
+        .logo-img
+    .nav-list
+      float: right
+      .nav-list-item
+        height: 100px
+        .nav-list-item-link
+          color: black
+          font-family: 'PT Sans', sans-serif
+          text-shadow: 0px 0px 5px white
+          transition: all 0.3s ease-in
+          height: inherit
+          padding-top: 35px
+          &:hover
+            background: #f8578d
+            color: white
+            text-shadow: none
+      .nav-list-item.active
+        background: #f8578d
+        .nav-list-item-link
+          color: white
+          text-shadow: none
+    @media only screen and (max-width: 768px)
+      .icon-bar
+        background: rgb(249, 87, 141)
+      .mobile-wrapper
+        //background: rgba(249, 87, 141,0.7)
+        padding: 0
+        .nav-list
+          display: block
+          width: 100%
+          .nav-list-item
+            //display: block
+            text-align: center
+            .nav-list-item-link
+              color: white
+              text-shadow: none
+
+
+
+  .header-wrapper
+    height: 100vh
+    background-image: url(../imgs/background-img.png)
+    background-size: cover
+    background-position: center
+    position: relative
+    .header-parallax
+      height: 100%
+      position: relative
+      top: 0
+      .img
+        width: 100px
+        height: auto
+        position: absolute
+        z-index: 9998
+      .img-1
+        bottom: 10px
+        left: 10%
+      .img-2
+        width: auto
+        height: 100px
+        top: 110px
+        left: 10%
+      .img-3
+        bottom: 10px
+        right: 5%
+    .header-content-wrapper
+      display: flex
+      flex-direction: row
+      align-items:center
+      position: absolute
+      height: 100%
+      top: 0
+      .header-content
+        width: 30%
+        margin-left: 20%
+        .title
+          font-family: 'Cormorant Garamond', serif
+          margin-bottom: 20px
+        .content
+          font-family: 'PT Sans', sans-serif
+          margin-bottom: 20px
+        .button
+          border-radius: 50px
+          padding: 5px 30px
+          color: white
+          font-family: 'PT Sans', sans-serif
+          background-color: #f8578d
+          box-shadow: 0px 5px 10px  rgba(249, 87, 141,0.5)
+          border: 1px solid transparent
+          transition: all 0.3s ease-in-out
+          &:hover
+            background: white
+            color: #f8578d
+            border-color: rgba(249, 87, 141,0.5)
+            box-shadow: 0px 10px 10px  rgba(249, 87, 141,0.2)
+
+#story
+  .story-wrapper
+    background: #f1f1f1
+    padding: 50px 0
+    .story-item-wrapper
+      background: white
+      text-align: center
+      padding-bottom:20px
+      .story-item-image-wrapper
+        height: 200px
+        overflow: hidden
+        perspective: 3
+        .story-item-image
+          height: 100%
+          background-image: url(../imgs/background-img.png)
+          background-size: cover
+          transition: all 0.6s ease-in-out
+          position: relative
+          &:before
+            content: ''
+            position: absolute
+            width: 100%
+            height: 100%
+            background: #cdcdcd
+            left: 0
+            opacity: 0
+            transition: all 0.3s ease-in-out
+          &:hover
+            transform: rotate(5deg) scale(1.2)
+            &:before
+              opacity: .3
+      .story-item-title
+        font-family: 'Cormorant Garamond', serif
+        color: black
+        text-transform: uppercase
+        font-weight: 500
+      .story-item-seperator
+        .story-item-wrapper
+          padding: 0
+          .story-item-line
+            width: 20px
+            height: 1px
+            background: #f8578d
+            display: inline-block
+            vertical-align: middle
+            transform: translateY(-1px)
+          .story-item-square
+            width: 10px
+            height: 10px
+            border: 1px solid #f8578d
+            transform: rotate(45deg)
+            display: inline-block
+      .story-item-content
+        text-align: justify
+        padding: 15px 20px
+        font-family: 'PT Sans', sans-serif
+      .story-item-button
+        background: white
+        font-family: 'PT Sans', sans-serif
+        text-transform: uppercase
+        padding: 5px 20px
+        border-radius: 0
+        color: #f8578d
+        border: 1px solid #f8578d
+        transition: all 0.3s ease-in-out
+        &:hover
+          background: #f8578d
+          color: white
+
+#date
+  .date-wrapper
+    background-image: url(../imgs/date-background.png)
+    background-size: cover
+    position: relative
+    background-position: center
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background: rgba(0,0,0,0.5)
+      z-index: 0
+    .logo
+      position: absolute
+      z-index: 2
+      left: 80px
+    .date-content-wrapper
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      height: 500px
+      .date-title
+        font-family: 'Cormorant Garamond', serif
+        color: rgba(255,255,255,.6)
+        letter-spacing: 2px
+        font-size: 40px
+      .date-timer-wrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        width: 70%
+        .date-counter-wrapper
+          font-family: 'Cormorant Garamond', serif
+          text-align: center
+          .counter
+            color: rgba(255,255,255,1)
+            font-size: 40px
+          .counter-name
+            color: rgba(255,255,255,.6)
+
+#us
+  //height: 700px
+  .us-wrapper
+    text-align: center
+    padding: 100px 0px
+    position: relative
+    overflow: hidden
+    background: #f4f2f3
+    .title
+      font-family: 'Cormorant Garamond', serif
+      color: black
+      text-transform: uppercase
+      font-weight: 500
+    .story-item-seperator
+      .story-item-wrapper
+        padding: 0
+        .story-item-line
+          width: 20px
+          height: 1px
+          background: #f8578d
+          display: inline-block
+          vertical-align: middle
+          transform: translateY(-1px)
+        .story-item-square
+          width: 10px
+          height: 10px
+          border: 1px solid #f8578d
+          transform: rotate(45deg)
+          display: inline-block
+    .content
+      margin-bottom: 100px
+    .bride-wrapper
+      width: 300px
+      height: 300px
+      margin: 50px auto
+      border-radius: 100%
+      background-image: url(../imgs/bride.png)
+      background-size: cover
+      position: relative
+      overflow: hidden
+      .overlay
+        position: absolute
+        height: 100%
+        width: 100%
+        border-radius: 100%
+        opacity: 0.5
+        background: black
+        top: 100%
+    .rose
+      width: 70px
+      height: 70px
+      background: rgba(255,255,255,0.5)
+      border-radius: 100%
+      background-image: url(../imgs/rose.png)
+      background-size: cover
+      bottom: 17%
+      left: 43%
+      position: absolute
+    .title
+    .subtitle
+      color: #c3c3c3
+    .circle
+      width: 70px
+      height: 70px
+      background: #f8578d
+      border-radius: 100%
+      box-shadow: 0px 5px 10px  rgba(249, 87, 141, 0.8)
+      margin: 160px auto
+      transition: all 0.3s ease-in-out
+      &:hover
+        transform: scale(0.8)
+        box-shadow: 0px 15px 10px  rgba(249, 87, 141, 0.4)
+      span
+        font-size: 20px
+        line-height: 69px
+        color: white
+
+    .groom-wrapper
+      width: 300px
+      height: 300px
+      margin: 50px auto
+      border-radius: 100%
+      background-image: url(../imgs/groom.png)
+      background-size: cover
+      position: relative
+      overflow: hidden
+      .overlay
+        position: absolute
+        height: 100%
+        width: 100%
+        border-radius: 100%
+        opacity: 0
+        background: black
+        top: 100%
+        transition: all 0.3s ease-in
+      &:hover
+        .overlay
+          opacity: 0.5
+          top: 0
+    .rose
+      width: 70px
+      height: 70px
+      background: rgba(255,255,255,0.5)
+      border-radius: 100%
+      background-image: url(../imgs/rose.png)
+      background-size: cover
+      bottom: 17%
+      left: 43%
+      position: absolute
+      @media only screen and (max-width: 783px)
+        left: 45%
+
+    .rose-3
+      position: absolute
+      width: 200px
+      left: -50px
+      top: 200px
+      opacity: 0.7
+    .rose-4
+      position: absolute
+      width: 150px
+      right: -50px
+      bottom: 50px
+      opacity: 0.7
+      transform: rotateY(180deg)
+
+#instagram
+  .instagram-wrapper
+    position: relative
+    cursor: pointer
+    &:hover
+      .slick-next, .slick-prev
+        background: rgba(0,0,0,0.8)
+    @for $i from 1 through 4
+      .instagram-picture-#{$i}
+        width: 25%
+        height: 250px
+        background-image: url(../imgs/instagram-#{$i}.jpg)
+        background-size: cover
+
+
+    .slick-next, .slick-prev
+      position: absolute
+      top: 50%
+      right: 0
+      transform: translateY(-50%)
+      //height: 50px
+      background: rgba(0,0,0,0.5)
+      color: white
+      border: none
+      font-size: 0px
+      padding: 10px 20px
+      transition: all 0.3s ease-in-out
+
+      &:before
+        content: '>'
+        font-size: 20px
+        font-weight: lighter
+    .slick-prev
+      z-index: 999
+      left: 0
+      &:before
+        content: '<'
+
+#RSVP
+  .RSVP-wrapper
+    padding: 80px 0px
+    background: #f4f2f3
+    .mail-wrapper
+      overflow: hidden
+      .mail-content
+        background: white
+        padding: 20px 30px 35px
+        position: relative
+        z-index: 1
+        box-shadow: 0px 5px 20px rgba(0,0,0,0.05)
+        margin-bottom: 30px
+        .title
+          margin-bottom: 20px
+          text-align: left
+          font-size: 20px
+          text-transform: capitalize
+        .main-form
+          width: 49.5%
+          margin: 0
+          padding: 0
+          padding: 5px
+          border: 1px solid #f4f2f3
+        .main-textarea
+          border-radius: 0
+          margin-top: 20px
+          border: 1px solid #f4f2f3
+          box-shadow: none
+        .circle
+          width: auto
+          height: auto
+          padding: 7px 35px
+          background: #f8578d
+          border-radius: 30px
+          margin: 0
+          box-shadow: 0px 0px 10px  rgba(249, 87, 141, 0.8)
+          transition: all .3s ease-in-out
+          position: absolute
+          cursor: pointer
+          left: 50%
+          bottom: -15px
+          transform: translateX(-50%)
+          font-size: 15px
+          color: white
+          &:hover
+            box-shadow: 0px
+            border-radius: 0
+            bottom: 0
+
+        .rose
+          width: 100px
+          height: 100px
+          background-image: url(../imgs/rose.png)
+          background-size: cover
+          position: absolute
+          z-index: 2
+          bottom: -20px
+          left: -20px
+          transform: rotateY(180deg)
+        .stamp
+          width: 100px
+          height: 100px
+          background-image: url(../imgs/stamp.png)
+          background-size: contain
+          background-repeat: no-repeat
+          position: absolute
+          z-index: 2
+          top: 10px
+          right: 10px
+          opacity: 0.8
+          //left: -20px
+          //transform: rotateY(180deg)
+      .picture
+        position: absolute
+        width: 300px
+        height: 300px
+        z-index: 0
+        background-image: url(../imgs/instagram-1.jpg)
+        background-size: cover
+        background-position: 50%
+        top: 15px
+        right: 20px
+        border: 20px solid white
+        transform: rotate(0deg)
+        opacity: 0.7
+
+        //
+          top: 15px
+          right: -50px
+          transform: rotate(22deg)
+
+
+#stories
+  .story-container
+    padding: 100px 0
+    background-image: url(../imgs/story-background.jpg)
+    background-size: cover
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background: rgba(0,0,0,0.7)
+      top: 0
+    .lead-paragraph
+      color: white
+      line-height: 20px
+      opacity: 0.8
+      &::first-letter
+        font-size: 70px
+        line-height: 55px
+        float: left
+        margin-right: 10px
+        color: #f8578d
+    .paragraph
+      color: white
+      opacity: 0.8
+  .circle
+    text-align: center
+    line-height: 36px
+    border-radius: 30px
+    width: 120px
+    height: 40px
+    color: white
+    margin: 50px auto 0
+    box-shadow: 0px 0px 30px  rgba(249, 87, 141, 0.6)
+    border: 1px solid transparent
+    &:hover
+      transform: scale(1)
+      background: transparent
+      box-shadow: none
+      cursor: pointer
+      border-color: rgba(249, 87, 141, 0.6)
+
+
+#thankyou
+  .thankyou-container
+    background-image: url(../imgs/thankyou-background.jpeg)
+    background-size: cover
+    position: relative
+    padding: 100px 0
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background: rgba(0,0,0,0.7)
+      top: 0
+    .title
+      color: white
+      padding: 20px 0
+    .thankyou-content-wrapper
+      display: flex
+      color: white
+      align-items: center
+      justify-content: space-around
+      margin: 20px 210px
+      border: 1px solid rgba(255,255,255,0.4)
+      position: relative
+      &:before, &:after
+        content: ''
+        position: absolute
+        width: 1px
+        height: 20px
+        background: rgba(255,255,255,0.4)
+        left: 52%
+        top: 0
+      &:after
+        top: auto
+        bottom: 0
+    .content
+      margin: 0
+      padding: 20px 0px
+    .content-small
+      margin: 0
+      font-size: 15px
+    .circle
+      width: 60px
+      height: 60px
+      background: #f8578d
+      border-radius: 100%
+      box-shadow: 0px 5px 10px  rgba(249, 87, 141, 0.5)
+      margin: 0px auto
+      margin-top: 50px
+      transition: all 0.3s ease-in-out
+      position: relative
+      //display: table
+      &:hover
+        transform: scale(1)
+      .icon
+        color: white
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%,-50%)
+        &:hover
+          cursor: pointer
+
+
+#details
+  .details-container
+    background: #f4f2f3
+    padding: 100px 0px
+    .circle
+      margin: 0 auto
+      width: 100%
+      text-align: center
+      color: white
+      line-height: 65px
+      border-radius: 0
+      box-shadow: none
+      &:hover
+        transform: none
+        cursor: pointer
+    table
+      width: 100%
+      text-align: center
+      color: #b3b3b3
+      tr
+        border: 1px solid #d1d1d1
+        td
+          padding: 20px
+          border: 1px solid #d1d1d1
+        .col-2
+          color: black
+          text-align: left
+          width: 75%
+    .map
+      padding: 25px
+      text-align: center
+      border: 1px solid #d1d1d1
+      border-top-color: transparent
+      color: #f8578d
+      &:hover
+        cursor: pointer
+      .icon
+        margin-right: 10px
+        animation: location 1.5s infinite
+        @keyframes location
+          50%
+            transform: translateY(-5px)
